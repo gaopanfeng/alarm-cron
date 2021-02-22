@@ -133,19 +133,19 @@ export default class Settings extends React.Component<any, State> {
 
           <div className="settings__block">
             <input type="text" autoComplete="off" value={settings.descAlarm}
-              onChange={e => this.updateSettingsKey('descAlarm', settings.descAlarm)} />
+              onChange={e => this.updateSettingsKey('descAlarm', e.target.value)} />
             <div className="margin-left">alarm description</div>
           </div>
 
           <div className="settings__block">
             <input type="text" autoComplete="off" value={settings.descTimer}
-              onChange={e => this.updateSettingsKey('descTimer', settings.descTimer)} />
+              onChange={e => this.updateSettingsKey('descTimer', e.target.value)} />
             <div className="margin-left">timer description</div>
           </div>
 
           <div className="settings__block">
             <input type="text" autoComplete="off" value={settings.descStopwatch}
-              onChange={e => this.updateSettingsKey('descStopwatch', settings.descStopwatch)} />
+              onChange={e => this.updateSettingsKey('descStopwatch', e.target.value)} />
             <div className="margin-left">stopwatch description</div>
           </div>
 
