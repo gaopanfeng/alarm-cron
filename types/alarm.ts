@@ -13,7 +13,7 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 */
-
+export type Locale = 'en' | 'cn'
 export type AlarmType = 'alarm' | 'timer' | 'stopwatch'
 export type AlarmStateType = 'enabled' | 'disabled' | 'active'
 export type RepeatType = 'once' | 'weekly' | 'countdown' | 'timer'
@@ -58,7 +58,7 @@ export interface AlarmFields {
 
 export interface SettingsFields {
   [key: string]: any;
-
+  locale: Locale;
   alarmType: AlarmType;
   descAlarm: string;
   descTimer: string;

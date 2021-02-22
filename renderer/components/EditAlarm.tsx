@@ -24,6 +24,7 @@ import Dropdown from 'react-dropdown'
 // @ts-ignore
 import TimeField from 'react-simple-timefield'
 import Alarm from '../../classes/Alarm'
+import locale from '../../locale'
 import { AlarmType, AlarmStateType, RepeatType, Week, SettingsFields } from '../../types/alarm'
 
 import '../styles/EditAlarm.scss'
@@ -286,19 +287,19 @@ export default class EditAlarm extends React.Component<Props, State> {
             +(alarmType==='alarm'?' active':'')}
             onClick={() => {
               alarmType !== 'alarm' && this.setAlarm()
-            }}>Alarm</div>
+            }}>{locale.Alarm}</div>
 
           <div className={"alarm-type-timer btn-padding"
             +(alarmType==='timer'?' active':'')}
             onClick={() => {
               alarmType !== 'timer' && this.setTimer()
-            }}>Timer</div>
+            }}>{locale.Timer}</div>
 
           <div className={"alarm-type-stopwatch btn-padding btn-last"
             +(alarmType==='stopwatch'?' active':'')}
             onClick={() => {
               alarmType !== 'stopwatch' && this.setStopwatch()
-            }}>Stopwatch</div>
+            }}>{locale.Stopwatch}</div>
         </div>
 
         <div className="edit__section padding">

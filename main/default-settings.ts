@@ -2,6 +2,7 @@ import { app } from 'electron'
 import { SettingsFields } from '../types/alarm'
 
 export const defaultSettings: SettingsFields = {
+  locale: 'en',
   alarmType: 'alarm',
   descAlarm: 'Alarm',
   descTimer: 'Timer',

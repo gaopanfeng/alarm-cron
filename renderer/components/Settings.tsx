@@ -120,6 +120,12 @@ export default class Settings extends React.Component<any, State> {
           <div className="settings-header">Default settings</div>
 
           <div className="settings__block">
+            <div className="margin-right">Locale(need restart app)</div>
+            <Dropdown options={['en', 'cn']}
+              onChange={e => this.updateSettingsKey('locale', e.value)}
+              value={settings.locale} />
+          </div>
+          <div className="settings__block">
             <div className="margin-right">Alarm type</div>
             <Dropdown options={['alarm', 'timer', 'stopwatch']}
               onChange={e => this.updateSettingsKey('alarmType', e.value)}

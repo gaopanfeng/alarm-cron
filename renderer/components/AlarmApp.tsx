@@ -26,6 +26,7 @@ import EditAlarm from './EditAlarm'
 import Alarm from '../../classes/Alarm'
 import { SettingsFields, AlarmType, AlarmStateType,
   RepeatType, Week } from '../../types/alarm'
+import {setLocale} from '../../locale'
 
 import '../styles/AlarmApp.scss'
 
@@ -71,6 +72,7 @@ export default class AlarmApp extends React.Component<any, State> {
 
     // @ts-ignore
     const settings: SettingsFields = store.get('settings')
+    setLocale(settings.locale);
     const alarmsJSON = store.get('alarms')
     let alarms: Alarm[] = []
     // @ts-ignore
